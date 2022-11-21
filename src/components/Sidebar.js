@@ -15,6 +15,7 @@ const Sidebar = () => {
           key={expand}
           expand={expand}
           className="navbar navbar-dark bg-dark fixed-top"
+          id="myDiv"
         >
           <Container fluid>
             <Navbar.Brand href="#">Dashboard</Navbar.Brand>

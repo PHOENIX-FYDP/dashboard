@@ -1,10 +1,17 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import LicensingScreen from "./screens/LicensingScreen";
 
 function App() {
   return (
     <div className="App">
-      <Sidebar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LicensingScreen />} exact />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
