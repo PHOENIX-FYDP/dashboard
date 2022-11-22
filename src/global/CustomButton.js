@@ -5,7 +5,7 @@ const CustomButton = (props) => {
   return (
     <>
       <Button
-        style={{ borderRadius: "20px", width: "12%", marginBottom: "10px" }}
+        style={{ borderRadius: "20px", width: "20%" }}
         variant="outline-primary"
         size={props.size}
       >

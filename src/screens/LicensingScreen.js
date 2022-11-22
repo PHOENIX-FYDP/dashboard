@@ -6,6 +6,7 @@ import Tabs from "react-bootstrap/Tabs";
 import CustomButton from "../global/CustomButton";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
 
 const LicensingScreen = () => {
   useEffect(() => {
@@ -27,6 +28,11 @@ const LicensingScreen = () => {
         >
           <Tab eventKey="features" title="Features">
             <Row>
+              <Col>
+                <Form.Group className="mb-3">
+                  <Form.Control type="text" placeholder="Search" size="sm" />
+                </Form.Group>
+              </Col>
               <Col className="text-end">
                 <CustomButton btnName={"Add License"} size={"sm"} />
               </Col>
