@@ -3,6 +3,9 @@ import Sidebar from "../components/Sidebar";
 import CustomTable from "../global/CustomTable";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import CustomButton from "../global/CustomButton";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const LicensingScreen = () => {
   useEffect(() => {
@@ -23,6 +26,12 @@ const LicensingScreen = () => {
           className="nav nav-pills mb-3"
         >
           <Tab eventKey="features" title="Features">
+            <Row>
+              <Col className="text-end">
+                <CustomButton btnName={"Add License"} size={"sm"} />
+              </Col>
+            </Row>
+
             <CustomTable
               feature={"Feature"}
               state={"State"}
