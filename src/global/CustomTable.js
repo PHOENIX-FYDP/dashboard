@@ -45,6 +45,15 @@ const CustomTable = (props) => {
     },
   ]);
 
+  const [syslogData, setSyslogData] = useState([
+    {
+      SHName: "192.168.72.45",
+      Port: "514",
+      Transport: "UDP",
+      LogFormat: "PlainMessage",
+    },
+  ]);
+
   return (
     <div>
       {props.screen === "licensing" ? (
@@ -183,6 +192,31 @@ const CustomTable = (props) => {
                       button={"Restart"}
                     />
                   </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      ) : null}
+
+      {props?.screen === "Syslog" ? (
+        <Table size="sm" className="table  table-striped ">
+          <thead>
+            <tr>
+              <th>{props.SHName}</th>
+              <th>{props.Port}</th>
+              <th>{props.Transport}</th>
+              <th>{props.LogFormat}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {syslogData?.map((x, index) => {
+              return (
+                <tr key={index}>
+                  <td>{x.SHName}</td>
+                  <td>{x.Port}</td>
+                  <td>{x.Transport}</td>
+                  <td>{x.LogFormat}</td>
                 </tr>
               );
             })}

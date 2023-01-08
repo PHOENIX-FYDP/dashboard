@@ -25,6 +25,12 @@ const CustomButton = (props) => {
           {props.btnName}
         </Button>
       ) : null}
+
+      {props?.button === "New Syslog Server" ? (
+        <Button style={{ width: "150px" }} variant="primary" size={props.size}>
+          {props.btnName}
+        </Button>
+      ) : null}
     </>
   );
 };

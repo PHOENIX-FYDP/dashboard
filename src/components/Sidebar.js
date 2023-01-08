@@ -33,22 +33,22 @@ const Sidebar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Licensing</Nav.Link>
+                  <Nav.Link href="#Licensing">Licensing</Nav.Link>
                   <NavDropdown
                     title="System"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">
+                    <NavDropdown.Item href="#Properties">
                       Properties
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Cluster</NavDropdown.Item>
+                    <NavDropdown.Item href="#Cluster">Cluster</NavDropdown.Item>
 
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item href="#Interfaces">
                       Interfaces
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action6">HSMs</NavDropdown.Item>
-                    <NavDropdown.Item href="#action7">NTPs</NavDropdown.Item>
-                    <NavDropdown.Item href="#action8">
+                    <NavDropdown.Item href="#HSMs">HSMs</NavDropdown.Item>
+                    <NavDropdown.Item href="#NTPs">NTPs</NavDropdown.Item>
+                    <NavDropdown.Item href="#Services">
                       Services
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -57,14 +57,10 @@ const Sidebar = () => {
                     title="Notification"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#SNMP">SNMP</NavDropdown.Item>
+                    <NavDropdown.Item href="#SMPT">SMPT</NavDropdown.Item>
 
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#Syslog">Syslog</NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown
