@@ -38,13 +38,18 @@ const Sidebar = () => {
                     title="System"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
+                    <NavDropdown.Item href="#action3">
+                      Properties
                     </NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">Cluster</NavDropdown.Item>
 
                     <NavDropdown.Item href="#action5">
-                      Something else here
+                      Interfaces
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action6">HSMs</NavDropdown.Item>
+                    <NavDropdown.Item href="#action7">NTPs</NavDropdown.Item>
+                    <NavDropdown.Item href="#action8">
+                      Services
                     </NavDropdown.Item>
                   </NavDropdown>
 

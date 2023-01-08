@@ -4,13 +4,27 @@ import Button from "react-bootstrap/Button";
 const CustomButton = (props) => {
   return (
     <>
-      <Button
-        style={{ borderRadius: "20px", width: "120px" }}
-        variant="outline-primary"
-        size={props.size}
-      >
-        {props.btnName}
-      </Button>
+      {props?.button === "Custom" ? (
+        <Button
+          style={{ borderRadius: "20px", width: "120px" }}
+          variant="outline-primary"
+          size={props.size}
+        >
+          {props.btnName}
+        </Button>
+      ) : null}
+
+      {props?.button === "Restart" ? (
+        <Button style={{ width: "100px" }} variant="danger" size={props.size}>
+          {props.btnName}
+        </Button>
+      ) : null}
+
+      {props?.button === "System Restart" ? (
+        <Button style={{ width: "150px" }} variant="danger" size={props.size}>
+          {props.btnName}
+        </Button>
+      ) : null}
     </>
   );
 };

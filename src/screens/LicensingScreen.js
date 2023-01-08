@@ -80,7 +80,11 @@ const LicensingScreen = () => {
                 </Form.Group>
               </Col>
               <Col className="text-end" lg={6} md={6} sm={12} xs={12}>
-                <CustomButton btnName={"Add License"} size={"sm"} />
+                <CustomButton
+                  btnName={"Add License"}
+                  size={"sm"}
+                  button={"Custom"}
+                />
               </Col>
             </Row>
 

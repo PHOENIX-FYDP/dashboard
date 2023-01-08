@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { Col, Row, Table } from "react-bootstrap";
+import React from "react";
+import { useEffect } from "react";
+import { Col, Row } from "react-bootstrap";
 import Sidebar from "../components/Sidebar";
-import CheckBox from "../global/CheckBox";
 import CustomButton from "../global/CustomButton";
 import CustomTable from "../global/CustomTable";
 
-const BackupScreen = () => {
+const InterfacesScreen = () => {
   useEffect(() => {
     var headerHeight = document.getElementById("myDiv").clientHeight;
     document.getElementById("lcontent").style.height = headerHeight + 20 + "px";
@@ -16,23 +16,17 @@ const BackupScreen = () => {
         <Sidebar />
       </div>
       <div id="lcontent"></div>
-
       <div className="container">
         <Row>
           <Col className="text-lg-start" lg={12}>
-            <h5>Backups</h5>
+            <h5>Interface Configuration</h5>
           </Col>
         </Row>
 
         <Row>
           <Col className="text-lg-end">
             <CustomButton
-              btnName={"Create Backup"}
-              size={"sm"}
-              button={"Custom"}
-            />
-            <CustomButton
-              btnName={"Update Backup"}
+              btnName={"Add Interface"}
               size={"sm"}
               button={"Custom"}
             />
@@ -40,18 +34,18 @@ const BackupScreen = () => {
         </Row>
 
         <CustomTable
-          BackupId={"Backup Id"}
-          Created={"Created"}
-          DataCreated={"Data Created"}
-          Scope={"Scope"}
-          TiredToHSM={"Tired To HSM"}
-          BackupKey={"Backup Key"}
-          Description={"Description"}
-          screen={"Backup"}
+          Name={"Name"}
+          NIC={"NIC"}
+          Type={"Type"}
+          Port={"Port"}
+          Mode={"Mode"}
+          ULIC={"Username Location In Certificate"}
+          SCA={"Server Certificate Autogen"}
+          screen={"Interface"}
         />
       </div>
     </div>
   );
 };
 
-export default BackupScreen;
+export default InterfacesScreen;
