@@ -54,6 +54,29 @@ const CustomTable = (props) => {
     },
   ]);
 
+  const [snmp, setSnmp] = useState([
+    {
+      Name: "SNMP User",
+      SecurityLevel: "authPriv",
+      AuthProtocol: "SHA-512",
+      PrivacyProtocol: "AES-256",
+      MIBAccesses: "Enterprise,Standard",
+      ReadWrite: "Read Only",
+    },
+  ]);
+
+  const [ldap, setLdap] = useState([
+    {
+      Domain: "demo.lab",
+      Server: "Idap://192.168.72.45",
+      RootDIN: "cn=Users,dc=demo,dc=lab",
+      BindDN: "cn=Administrator,cn=User,dc=demo,dc=lab",
+      SearchFilter: "",
+      LoginName: "cn",
+      UniqueID: "cn",
+    },
+  ]);
+
   return (
     <div>
       {props.screen === "licensing" ? (
@@ -217,6 +240,68 @@ const CustomTable = (props) => {
                   <td>{x.Port}</td>
                   <td>{x.Transport}</td>
                   <td>{x.LogFormat}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      ) : null}
+
+      {props?.screen === "SNMP" ? (
+        <Table size="sm" className="table  table-striped ">
+          <thead>
+            <tr>
+              <th>{props.Name}</th>
+              <th>{props.SecurityLevel}</th>
+              <th>{props.AuthProtocol}</th>
+              <th>{props.PrivacyProtocol}</th>
+              <th>{props.MIBAccesses}</th>
+              <th>{props.ReadWrite}</th>
+              <th>{props.Action}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {snmp?.map((x, index) => {
+              return (
+                <tr key={index}>
+                  <td>{x.Name}</td>
+                  <td>{x.SecurityLevel}</td>
+                  <td>{x.AuthProtocol}</td>
+                  <td>{x.PrivacyProtocol}</td>
+                  <td>{x.MIBAccesses}</td>
+                  <td>{x.ReadWrite}</td>
+                  <td></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      ) : null}
+
+      {props?.screen === "LDAP" ? (
+        <Table size="sm" className="table  table-striped ">
+          <thead>
+            <tr>
+              <th>{props.Domain}</th>
+              <th>{props.Server}</th>
+              <th>{props.RootDIN}</th>
+              <th>{props.BindDN}</th>
+              <th>{props.SearchFilter}</th>
+              <th>{props.LoginName}</th>
+              <th>{props.UniqueID}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ldap?.map((x, index) => {
+              return (
+                <tr key={index}>
+                  <td>{x.Domain}</td>
+                  <td>{x.Server}</td>
+                  <td>{x.RootDIN}</td>
+                  <td>{x.BindDN}</td>
+                  <td>{x.SearchFilter}</td>
+                  <td>{x.LoginName}</td>
+                  <td>{x.UniqueID}</td>
                 </tr>
               );
             })}
