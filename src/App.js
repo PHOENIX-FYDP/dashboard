@@ -16,7 +16,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LDAPScreens />} exact />
+          {/* <Route path="/" element={<LDAPScreens />} exact /> */}
+          {/* <Route path="/" element={<LicensingScreen />} exact /> */}
+          {/* <Route path="/" element={<BackupScreen />} exact /> */}
+          {/* <Route path="/" element={<InterfacesScreen />} exact /> */}
+          {/* <Route path="/" element={<ClusterScreen />} exact /> */}
+          {/* <Route path="/" element={<ServicesScreen />} exact /> */}
+          {/* <Route path="/" element={<SyslogScreen />} exact /> */}
+          {/* <Route path="/" element={<SNMPScreen />} exact /> */}
+
         </Routes>
       </BrowserRouter>
     </div>
