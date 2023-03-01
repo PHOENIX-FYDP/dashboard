@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import Sidebar from "../components/Sidebar";
 import CustomButton from "../global/CustomButton";
 import CustomTable from "../global/CustomTable";
+import MultiSeriesAreaChart from "../views/area charts/Multi Series Area Chart";
 
 const ServicesScreen = () => {
   useEffect(() => {
@@ -41,6 +42,12 @@ const ServicesScreen = () => {
                 The system will be unavailable during restart!
               </figcaption>
             </span>
+          </Col>
+        </Row>
+
+        <Row className="mt-5">
+          <Col>
+            <MultiSeriesAreaChart />
           </Col>
         </Row>
       </div>

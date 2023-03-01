@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import Sidebar from "../components/Sidebar";
 import CustomButton from "../global/CustomButton";
 import CustomTable from "../global/CustomTable";
+import DoughnutChart from "../views/pie & funnel charts/Doughnut Chart";
 
 const ClusterScreen = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const ClusterScreen = () => {
       <div className="l-header">
         <Sidebar />
       </div>
+
       <div id="lcontent"></div>
       <div className="container">
         <Row>
@@ -45,6 +47,12 @@ const ClusterScreen = () => {
         <Row>
           <Col className="text-lg-end">
             <h6>No Cluster Nodes</h6>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <DoughnutChart />
           </Col>
         </Row>
       </div>

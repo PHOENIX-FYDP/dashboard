@@ -10,21 +10,31 @@ import ServicesScreen from "./screens/ServicesScreen";
 import SyslogScreen from "./screens/SyslogScreen";
 import SNMPScreen from "./screens/SNMPScreen";
 import LDAPScreens from "./screens/LDAPScreens";
+import ColumnChartwithIndexlabel from "../src/views/overview/Column Chart with Index label";
+import DoughnutChart from "../src/views/pie & funnel charts/Doughnut Chart";
+import BarChart from "../src/views/column charts/Bar Chart";
+import MultiSeriesAreaChart from "../src/views/area charts/Multi Series Area Chart";
+import PieChartWithCustomization from "../src/views/pie & funnel charts/Pie Chart with Customization";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<LDAPScreens />} exact /> */}
-          {/* <Route path="/" element={<LicensingScreen />} exact /> */}
-          {/* <Route path="/" element={<BackupScreen />} exact /> */}
-          {/* <Route path="/" element={<InterfacesScreen />} exact /> */}
-          {/* <Route path="/" element={<ClusterScreen />} exact /> */}
-          {/* <Route path="/" element={<ServicesScreen />} exact /> */}
+          {/* <Route path="/" element={<ColumnChartwithIndexlabel />} exact /> */}
+          {/* <Route path="/" element={<DoughnutChart />} exact /> */}
+          {/* <Route path="/" element={<BarChart />} exact /> */}
+          {/* <Route path="/" element={<MultiSeriesAreaChart />} exact /> */}
+          {/* <Route path="/" element={<PieChartWithCustomization />} exact /> */}
+
+          <Route path="/" element={<LDAPScreens />} exact />
+          <Route path="/licensing" element={<LicensingScreen />} />
+          <Route path="/backup" element={<BackupScreen />} />
+          <Route path="/interfaces" element={<InterfacesScreen />} />
+          <Route path="/cluster" element={<ClusterScreen />} />
+          <Route path="/services" element={<ServicesScreen />} />
           {/* <Route path="/" element={<SyslogScreen />} exact /> */}
           {/* <Route path="/" element={<SNMPScreen />} exact /> */}
-
         </Routes>
       </BrowserRouter>
     </div>

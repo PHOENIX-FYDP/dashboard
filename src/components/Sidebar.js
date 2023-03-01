@@ -6,8 +6,40 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const navigateToCluster = () => {
+    navigate({
+      pathname: "/cluster",
+    });
+  };
+
+  const navigateToLicensing = () => {
+    navigate({
+      pathname: "/Licensing",
+    });
+  };
+
+  const navigateToInterfaces = () => {
+    navigate({
+      pathname: "/interfaces",
+    });
+  };
+
+  const navigateToService = () => {
+    navigate({
+      pathname: "/services",
+    });
+  };
+
+  const navigateToBackup = () => {
+    navigate({
+      pathname: "/backup",
+    });
+  };
+
   return (
     <>
       {[false].map((expand) => (
@@ -31,9 +63,10 @@ const Sidebar = () => {
                   Dashboard
                 </Offcanvas.Title>
               </Offcanvas.Header>
+
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#Licensing">Licensing</Nav.Link>
+                  <Nav.Link onClick={navigateToLicensing}>Licensing</Nav.Link>
                   <NavDropdown
                     title="System"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -41,14 +74,16 @@ const Sidebar = () => {
                     <NavDropdown.Item href="#Properties">
                       Properties
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#Cluster">Cluster</NavDropdown.Item>
+                    <NavDropdown.Item onClick={navigateToCluster}>
+                      Cluster
+                    </NavDropdown.Item>
 
-                    <NavDropdown.Item href="#Interfaces">
+                    <NavDropdown.Item onClick={navigateToInterfaces}>
                       Interfaces
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#HSMs">HSMs</NavDropdown.Item>
                     <NavDropdown.Item href="#NTPs">NTPs</NavDropdown.Item>
-                    <NavDropdown.Item href="#Services">
+                    <NavDropdown.Item onClick={navigateToService}>
                       Services
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -91,7 +126,7 @@ const Sidebar = () => {
                     </NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown
+                  {/* <NavDropdown
                     title="Backups"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -103,7 +138,8 @@ const Sidebar = () => {
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
+                  <Nav.Link onClick={navigateToBackup}>Backups</Nav.Link>
 
                   <Nav.Link href="#action1">Domains</Nav.Link>
                   <Nav.Link href="#action1">Logs</Nav.Link>

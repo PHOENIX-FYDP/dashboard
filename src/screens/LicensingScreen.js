@@ -7,6 +7,7 @@ import CustomButton from "../global/CustomButton";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import ColumnChartwithIndexlabel from "../views/overview/Column Chart with Index label";
 
 const LicensingScreen = () => {
   useEffect(() => {
@@ -102,7 +103,13 @@ const LicensingScreen = () => {
               />
             </div>
           </Tab>
-          <Tab eventKey="lockcolors" title="Lock Colors"></Tab>
+          <Tab eventKey="lockcolors" title="Lock Colors">
+            <Row>
+              <Col>
+                <ColumnChartwithIndexlabel />
+              </Col>
+            </Row>
+          </Tab>
         </Tabs>
       </div>
     </div>

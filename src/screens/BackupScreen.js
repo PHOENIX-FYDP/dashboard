@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import CheckBox from "../global/CheckBox";
 import CustomButton from "../global/CustomButton";
 import CustomTable from "../global/CustomTable";
+import PieChartWithCustomization from "../views/pie & funnel charts/Pie Chart with Customization";
 
 const BackupScreen = () => {
   useEffect(() => {
@@ -49,6 +50,12 @@ const BackupScreen = () => {
           Description={"Description"}
           screen={"Backup"}
         />
+
+        <Row>
+          <Col>
+            <PieChartWithCustomization />
+          </Col>
+        </Row>
       </div>
     </div>
   );

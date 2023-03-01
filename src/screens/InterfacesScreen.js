@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import Sidebar from "../components/Sidebar";
 import CustomButton from "../global/CustomButton";
 import CustomTable from "../global/CustomTable";
+import BarChart from "../views/column charts/Bar Chart";
 
 const InterfacesScreen = () => {
   useEffect(() => {
@@ -43,6 +44,12 @@ const InterfacesScreen = () => {
           SCA={"Server Certificate Autogen"}
           screen={"Interface"}
         />
+
+        <Row>
+          <Col>
+            <BarChart />
+          </Col>
+        </Row>
       </div>
     </div>
   );
