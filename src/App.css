@@ -1,6 +1,8 @@
-.App {
+@import 'Colors';
+
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -41,4 +43,293 @@ td {
 }
 th {
   font-size: 13px;
+}
+
+/* Header */
+nav {
+  background-color: var(--sixth);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  top: 0%;
+}
+
+nav > main {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > main > a {
+  font: 600 1.5rem var(--font1);
+  color: var(--fourth);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+nav > main > a:hover {
+  color: var(--first);
+}
+
+nav > h1 {
+  color: var(--fourth);
+  font: 600 2.5rem var(--font1);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--sixth);
+  height: 200px;
+  width: 100%;
+  color: var(--fourth);
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding: 2rem;
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer > div > h1 {
+  font: 700 2rem var(--font1);
+  text-transform: uppercase;
+  color: var(--fourth);
+}
+footer > div > p {
+  font: 500 1.2rem var(--font1);
+}
+footer > div > h5 {
+  font: 300 2rem var(--font1);
+  margin: 1rem 0;
+  text-align: center;
+}
+footer > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer > div > div > a {
+  font: 900 1rem var(--font1);
+  color: var(--fourth);
+}
+footer > div > div > a:hover {
+  color: var(--second);
+}
+
+/* CONTACT */
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--third);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact > main {
+  background-color: black;
+  width: 70%;
+  height: 70vh;
+  padding: 2rem;
+  border-radius: 150px;
+}
+
+.contact > main > h1 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+}
+
+.contact > main > form {
+  display: flex;
+  margin: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact > main > form > div {
+  width: 60%;
+  height: 3rem;
+  display: flex;
+  margin: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contact > main > form > div > input {
+  align-self: stretch;
+  width: 110%;
+  padding: 1.2rem;
+  border-radius: 5px;
+  border: 2px solid rgba(123, 123, 123, 0.6);
+  outline: none;
+}
+
+.contact > main > form > button {
+  margin: 2rem 0;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--sixth);
+  color: var(--fourth);
+  width: 200px;
+  font: 500 1rem var(--font1);
+}
+
+.contact > main > form > button:hover {
+  opacity: 0.9;
+}
+
+/* HOME */
+
+.Home {
+  width: 100%;
+  height: 100vh;
+  background-color: --third;
+}
+.Home > main {
+  position: absolute;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  justify-content: center;
+}
+.Home > main > h1 {
+  color: --seventh;
+  font: 600 5rem --font1;
+}
+.Home > main > p {
+  color: --seventh;
+  font: 900 1.5rem --font1;
+  filter: blur(0.5px);
+}
+.Home::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: no-repeat center/auto url(../src/assets/kindpng_1140560.png);
+  border-radius: 0 0 200px 200px;
+}
+.Home1 {
+  width: 100%;
+  height: 100vh;
+  background-color: --third;
+  padding: 500px 0;
+  margin-top: -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Home1 > img {
+  width: 50%;
+  animation: imgUp 0.9s linear infinite alternate;
+}
+.Home1 > div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+  height: 30vh;
+  background-color: black;
+  border-radius: 25px;
+  padding: 15px;
+}
+.Home1 > div > p {
+  color: --seventh;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  font: 300 1.5rem --font1;
+  background-color: black;
+}
+@keyframes imgUp {
+  to {
+    transform: translateY(25px);
+  }
+}
+.Home2 {
+  width: 100%;
+  height: 100vh;
+  background-color: --third;
+  margin-top: -200px;
+  display: flex;
+}
+.Home2 > div {
+  width: 70%;
+  height: 80vh;
+  background-color: black;
+  border-radius: 0 200px 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.Home2 > div > h1 {
+  border-bottom: 2px solid --seventh;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  width: 15rem;
+  color: white;
+}
+.Home2 > div > p {
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  padding: 5rem;
+  font: italic 200 1.3rem --font1;
+  line-height: 170%;
+  color: white;
+}
+
+.Home3 {
+  width: 100%;
+  height: 100vh;
+  background-color: --third;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Home3 > div {
+  width: 70%;
+  height: 80vh;
+  background-color: black;
+  border-radius: 200px 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.Home3 > div > h1 {
+  border-bottom: 2px solid --seventh;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  width: 15rem;
+  color: --seventh;
+}
+
+.Home3 > div > p {
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  padding: 5rem;
+  font: italic 200 1.3rem --font1;
+  line-height: 170%;
+  color: white;
 }

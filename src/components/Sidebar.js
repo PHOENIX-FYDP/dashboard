@@ -40,6 +40,14 @@ const Sidebar = () => {
     });
   };
 
+  const navigateToHome = () => {
+    navigate({
+      pathname: "/",
+    });
+  };
+
+
+
   return (
     <>
       {[false].map((expand) => (
@@ -66,30 +74,31 @@ const Sidebar = () => {
 
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link onClick={navigateToHome}>Back To Home </Nav.Link>
                   <Nav.Link onClick={navigateToLicensing}>Licensing</Nav.Link>
                   <NavDropdown
-                    title="System"
+                    title="Vulnerability Assessment"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#Properties">
+                    {/* <NavDropdown.Item href="#Properties">
                       Properties
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> */}
                     <NavDropdown.Item onClick={navigateToCluster}>
-                      Cluster
+                      Vulnerability Report
                     </NavDropdown.Item>
 
                     <NavDropdown.Item onClick={navigateToInterfaces}>
-                      Interfaces
+                      Data Visualizer
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#HSMs">HSMs</NavDropdown.Item>
-                    <NavDropdown.Item href="#NTPs">NTPs</NavDropdown.Item>
+                    {/* <NavDropdown.Item href="#HSMs">HSMs</NavDropdown.Item>
+                    <NavDropdown.Item href="#NTPs">NTPs</NavDropdown.Item> */}
                     <NavDropdown.Item onClick={navigateToService}>
                       Services
                     </NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown
-                    title="Notification"
+                    title="Alerts"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item href="#SNMP">SNMP</NavDropdown.Item>
@@ -98,7 +107,7 @@ const Sidebar = () => {
                     <NavDropdown.Item href="#Syslog">Syslog</NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown
+                  {/* <NavDropdown
                     title="Policies"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -110,7 +119,7 @@ const Sidebar = () => {
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
 
                   <NavDropdown
                     title="Identity Providers"
@@ -141,9 +150,9 @@ const Sidebar = () => {
                   </NavDropdown> */}
                   <Nav.Link onClick={navigateToBackup}>Backups</Nav.Link>
 
-                  <Nav.Link href="#action1">Domains</Nav.Link>
+                  {/* <Nav.Link href="#action1">Domains</Nav.Link> */}
                   <Nav.Link href="#action1">Logs</Nav.Link>
-                  <Nav.Link href="#action1">Schedules</Nav.Link>
+                  {/* <Nav.Link href="#action1">Schedules</Nav.Link> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

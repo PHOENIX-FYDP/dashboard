@@ -10,6 +10,8 @@ import ServicesScreen from "./screens/ServicesScreen";
 import SyslogScreen from "./screens/SyslogScreen";
 import SNMPScreen from "./screens/SNMPScreen";
 import LDAPScreens from "./screens/LDAPScreens";
+import Header from "./components/Header";
+import Home from "./components/Home";
 import ColumnChartwithIndexlabel from "../src/views/overview/Column Chart with Index label";
 import DoughnutChart from "../src/views/pie & funnel charts/Doughnut Chart";
 import BarChart from "../src/views/column charts/Bar Chart";
@@ -20,14 +22,21 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
+
+
         <Routes>
           {/* <Route path="/" element={<ColumnChartwithIndexlabel />} exact /> */}
           {/* <Route path="/" element={<DoughnutChart />} exact /> */}
           {/* <Route path="/" element={<BarChart />} exact /> */}
           {/* <Route path="/" element={<MultiSeriesAreaChart />} exact /> */}
           {/* <Route path="/" element={<PieChartWithCustomization />} exact /> */}
+          <Route path="/" element={<Home />} />
 
-          <Route path="/" element={<LDAPScreens />} exact />
+
+
+
+          <Route path="/LdapScreen" element={<LDAPScreens />} exact /> //have some work
           <Route path="/licensing" element={<LicensingScreen />} />
           <Route path="/backup" element={<BackupScreen />} />
           <Route path="/interfaces" element={<InterfacesScreen />} />

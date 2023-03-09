@@ -103,13 +103,13 @@ const LicensingScreen = () => {
               />
             </div>
           </Tab>
-          <Tab eventKey="lockcolors" title="Lock Colors">
+          {/* <Tab eventKey="lockcolors" title="Lock Colors">
             <Row>
               <Col>
                 <ColumnChartwithIndexlabel />
               </Col>
             </Row>
-          </Tab>
+          </Tab> */}
         </Tabs>
       </div>
     </div>
