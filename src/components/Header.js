@@ -13,7 +13,8 @@ const Header = () => {
             <HashLink to={"/#about"}>About</HashLink>
             <HashLink to={"/#services"}>Services</HashLink>
             <HashLink to={'/#contact'}>Contact</HashLink>
-            <Link to={'/licensing'}>Dashboard</Link>
+            {/* <Link to={'/licensing'}>Dashboard</Link> */}
+            <a href="http://localhost:3001" target="_blank">Dashboard</a>
 
         </main>
 
