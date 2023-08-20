@@ -14,7 +14,9 @@ const Header = () => {
             <HashLink to={"/#services"}>Services</HashLink>
             <HashLink to={'/#contact'}>Contact</HashLink>
             {/* <Link to={'/licensing'}>Dashboard</Link> */}
-            <a href="http://localhost:3001" target="_blank">Dashboard</a>
+            <a href="http://localhost:3000" target="_blank">Data Protection</a>
+
+            <a href="http://localhost:8000" target="_blank">Dashboard</a>
 
         </main>
 
